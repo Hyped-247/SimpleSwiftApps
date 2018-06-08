@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrazyCon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12E-Xb-B2u">
+                                <rect key="frame" x="0.0" y="343" width="667" height="32"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I2Z-9i-geM"/>
+                                    <barButtonItem style="plain" id="kI7-uL-b55">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7DA-gV-lPa">
+                                            <rect key="frame" x="317.5" y="1" width="32" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Hide"/>
+                                            <connections>
+                                                <action selector="HideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dko-ep-6Xx"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QMx-1h-S0a"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-O0-6qg">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="343"/>
+                            </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4C-0l-PWf">
+                                <rect key="frame" x="667" y="0.0" width="0.0" height="343"/>
+                                <connections>
+                                    <segue destination="gnT-Cf-Bnh" kind="embed" id="pbB-dU-U3O"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="top" secondItem="ZgG-O0-6qg" secondAttribute="bottom" id="3LL-O5-OfC"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EKk-Ux-op9"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JfL-fg-Qc0"/>
+                            <constraint firstItem="y4C-0l-PWf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OUu-aX-tfy"/>
+                            <constraint firstItem="y4C-0l-PWf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VdF-bl-cuO"/>
+                            <constraint firstItem="y4C-0l-PWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XGY-qS-FVH"/>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="top" secondItem="y4C-0l-PWf" secondAttribute="bottom" id="aZf-iO-cwz"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dzU-iW-mg2"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lFF-xQ-qZ3"/>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="top" secondItem="y4C-0l-PWf" secondAttribute="bottom" id="mrY-OC-2lp"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ngI-tB-qwJ"/>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ptZ-AZ-ylX"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qHM-Sd-MsW"/>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rFK-JT-k6y"/>
+                            <constraint firstItem="12E-Xb-B2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="smU-B4-ZlY"/>
+                            <constraint firstItem="y4C-0l-PWf" firstAttribute="leading" secondItem="ZgG-O0-6qg" secondAttribute="trailing" id="v6H-XH-bhE"/>
+                            <constraint firstItem="ZgG-O0-6qg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.66" id="vTa-yr-szU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y4C-0l-PWf" secondAttribute="trailing" id="wHJ-zj-Ewd"/>
+                            <constraint firstItem="y4C-0l-PWf" firstAttribute="top" secondItem="ZgG-O0-6qg" secondAttribute="bottom" id="ypv-d0-9DA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lFF-xQ-qZ3"/>
+                                <exclude reference="ngI-tB-qwJ"/>
+                                <exclude reference="qHM-Sd-MsW"/>
+                                <exclude reference="vTa-yr-szU"/>
+                                <exclude reference="mrY-OC-2lp"/>
+                                <exclude reference="VdF-bl-cuO"/>
+                                <exclude reference="XGY-qS-FVH"/>
+                                <exclude reference="ypv-d0-9DA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="7DA-gV-lPa" id="bMb-9b-aoC"/>
+                        <outlet property="pMapHeight" destination="vTa-yr-szU" id="LOr-0g-gDp"/>
+                        <outlet property="pViewEast" destination="VdF-bl-cuO" id="SfT-17-hje"/>
+                        <outlet property="pViewSouth" destination="mrY-OC-2lp" id="ssk-ZU-sPK"/>
+                        <outlet property="pViewWest" destination="XGY-qS-FVH" id="OW2-ZK-qTp"/>
+                        <outlet property="pme" destination="ngI-tB-qwJ" id="PHA-Os-WgC"/>
+                        <outlet property="pmeCon" destination="ngI-tB-qwJ" id="4P8-Xz-2UN"/>
+                        <outlet property="pmnCon" destination="qHM-Sd-MsW" id="sie-RG-t9T"/>
+                        <outlet property="pmsCon" destination="ypv-d0-9DA" id="HTJ-fE-Zlm"/>
+                        <outlet property="pmwCon" destination="lFF-xQ-qZ3" id="3gE-UD-aPS"/>
+                        <outlet property="view" destination="y4C-0l-PWf" id="NHO-A6-qf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.23538230884558" y="29.600000000000001"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hXN-oa-jyc">
+            <objects>
+                <viewController id="gnT-Cf-Bnh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s13-Px-Upk">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="343"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3bm-7A-9Z6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YvD-Rr-O2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="836"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="siU-Y3-q6c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zB-SB-9uJ">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Westmont" id="Mpi-ox-QZX">
+                                        <connections>
+                                            <action selector="westmontButton:" destination="BYZ-38-t0r" id="1ve-qH-U0c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Home" id="5a5-mC-Ymg">
+                                        <connections>
+                                            <action selector="homeButton:" destination="BYZ-38-t0r" id="MBm-uH-yT5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="G-N" id="ef4-hh-17D">
+                                        <connections>
+                                            <action selector="gameNewButton:" destination="BYZ-38-t0r" id="QkW-V7-7fk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="c5K-cU-aNv">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4v8-jp-7n2">
+                                            <rect key="frame" x="222" y="6.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="switchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="4zv-Ix-FMH"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6zB-SB-9uJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3C8-rv-n9O"/>
+                            <constraint firstItem="siU-Y3-q6c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7hm-hz-Ucp"/>
+                            <constraint firstItem="6zB-SB-9uJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KkP-Rc-Tb4"/>
+                            <constraint firstItem="6zB-SB-9uJ" firstAttribute="top" secondItem="siU-Y3-q6c" secondAttribute="bottom" id="QpI-Hu-ggF"/>
+                            <constraint firstItem="siU-Y3-q6c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yz9-MS-sOd"/>
+                            <constraint firstItem="siU-Y3-q6c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jhh-Qz-Z3j"/>
+                            <constraint firstItem="6zB-SB-9uJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zk1-CM-WBh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationSwitch" destination="4v8-jp-7n2" id="gnX-wq-ZQm"/>
+                        <outlet property="mapView" destination="siU-Y3-q6c" id="Krc-dL-x8r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
